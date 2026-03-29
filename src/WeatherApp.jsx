@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export const WheatherApp = () => {
+export const WeatherApp = () => {
     const apiKey = import.meta.env.VITE_OPEN_WEATHER_MAP
     const baseUrl = `https://api.openweathermap.org/data/2.5/weather?q=`
     const difKelvin = 273.15

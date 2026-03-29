@@ -1,16 +1,83 @@
-# React + Vite
+# 🌦️ Weather App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A straightforward weather lookup application built with **React 19** that fetches real-time weather data from the **OpenWeatherMap API**. Enter a city name to get the current temperature, weather conditions, and an icon representing the forecast.
 
-Currently, two official plugins are available:
+### 🔗 [Live Demo](https://weather-app-ten-omega-76.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+### Tech Stack
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+![React](https://img.shields.io/badge/React-19.2-61DAFB?style=flat-square&logo=react&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-7.3-646CFF?style=flat-square&logo=vite&logoColor=white)
+![OpenWeatherMap](https://img.shields.io/badge/OpenWeatherMap-API-orange?style=flat-square&logo=openweathermap&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-Custom-1572B6?style=flat-square&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Features
+
+- 🌡️ **Real-time Weather Data** — Current temperature converted from Kelvin to Celsius
+- 🌤️ **Weather Conditions** — Displays meteorological description and dynamic weather icon
+- 🏙️ **City Search** — Look up weather for any city worldwide
+- 📱 **Responsive Design** — Mobile-friendly layout with adaptive styling
+- 🔐 **Secure API Keys** — Managed through Vite environment variables
+
+---
+
+### Project Structure
+
+```
+weather-app/
+├── index.html
+├── package.json
+├── vite.config.js
+└── src/
+    ├── main.jsx               # App entry point
+    ├── WheatherApp.jsx         # Main weather component
+    └── styles/
+        └── wheatherStyles.css  # Responsive styles
+```
+
+---
+
+### Getting Started
+
+#### Prerequisites
+- Node.js ≥ 18
+- A free [OpenWeatherMap API key](https://openweathermap.org/api)
+
+#### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/JohnCard/weather-app.git
+
+# Navigate to the project
+cd weather-app
+
+# Install dependencies
+npm install
+
+# Create environment file
+echo "VITE_OPEN_WEATHER_MAP=your_api_key_here" > .env
+
+# Start development server
+npm run dev
+```
+
+#### Environment Variables
+
+| Variable | Description |
+|---|---|
+| `VITE_OPEN_WEATHER_MAP` | Your OpenWeatherMap API key |
+
+---
+
+### How It Works
+
+1. User enters a city name and submits the form
+2. The app fetches data from OpenWeatherMap's Current Weather API
+3. Temperature is converted from Kelvin to Celsius (`temp - 273.15`)
+4. Weather condition, description, and icon are displayed dynamically
