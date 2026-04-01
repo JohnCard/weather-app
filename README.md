@@ -81,3 +81,11 @@ npm run dev
 2. The app fetches data from OpenWeatherMap's Current Weather API
 3. Temperature is converted from Kelvin to Celsius (`temp - 273.15`)
 4. Weather condition, description, and icon are displayed dynamically
+
+---
+
+### Screenshots
+
+| Search Interface |
+|:-:|
+| ![Search](img/weather_app.png) |
